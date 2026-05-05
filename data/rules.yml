@@ -24,4 +24,9 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
+- rule: Answer cotacao dolar
+  steps:
+  - intent: cotacao_dolar
+  - action: action_cotacao_dolar
+
 

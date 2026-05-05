@@ -3,6 +3,9 @@ version: "3.1"
 nlu:
 - intent: greet
   examples: |
+    - oi
+    - ola
+    - oie
     - hey
     - hello
     - hi
@@ -104,4 +107,20 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
-
+- intent: cotacao_dolar
+  examples: |
+    - quanto tá o dólar
+    - qual o valor do dólar hoje
+    - cotação do dólar
+    - dólar hoje
+    - preço do dólar
+    - quanto vale o dólar
+    - dólar banco central
+    - cotação dólar brasil
+    - me diga o valor do dólar
+    - quanto está o usd
+    - usd hoje
+    - valor do dólar comercial
+    - qnt ta o dolar
+    - dolar hj
+    - quanto ta o usd hj

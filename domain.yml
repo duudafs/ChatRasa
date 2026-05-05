@@ -9,6 +9,7 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - cotacao_dolar
 
 entities:
   - name
@@ -45,6 +46,9 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+actions:
+  - action_cotacao_dolar 
 
 session_config:
   session_expiration_time: 180
