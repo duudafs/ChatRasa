@@ -1,0 +1,71 @@
+{
+  "type": "IntentMaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "action_yourewelcome": 0,
+        "affirm": 1,
+        "ask_confirmation": 2,
+        "back": 3,
+        "bot_challenge": 4,
+        "confirm_schedule": 5,
+        "cotacao_dolar": 6,
+        "deny": 7,
+        "goodbye": 8,
+        "greet": 9,
+        "mood_great": 10,
+        "mood_unhappy": 11,
+        "nlu_fallback": 12,
+        "out_of_scope": 13,
+        "preco_servico": 14,
+        "restart": 15,
+        "say_name": 16,
+        "session_start": 17,
+        "valor_sessao": 18,
+        "yourewelcome": 19
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_cotacao_dolar": 13,
+        "action_greet": 14,
+        "action_preco_servico": 15,
+        "action_yourewelcome": 16,
+        "utter_ask_confirmation": 17,
+        "utter_ask_name": 18,
+        "utter_cheer_up": 19,
+        "utter_confirmation": 20,
+        "utter_did_that_help": 21,
+        "utter_goodbye": 22,
+        "utter_greet": 23,
+        "utter_happy": 24,
+        "utter_iamabot": 25,
+        "utter_meeting": 26
+      },
+      "entities": {
+        "name": 0,
+        "servico": 1
+      },
+      "slots": {
+        "name_0": 0,
+        "servico_0": 1
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

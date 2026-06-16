@@ -8,7 +8,7 @@
 # This is a simple example for a custom action which utters "Hello World!"
 
 from typing import Any, Text, Dict, List
-
+import random
 from rasa_sdk import Action, Tracker
 from datetime import datetime, timedelta
 from rasa_sdk.executor import CollectingDispatcher
@@ -37,15 +37,44 @@ class ActionCotacaoDolar(Action):
         return []
 #
 #
-# class ActionHelloWorld(Action):
-#
-#     def name(self) -> Text:
-#         return "action_hello_world"
-#
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#
-#         dispatcher.utter_message(text="Hello World!")
-#
-#         return []
+class ActionGreet(Action):
+
+    def name(self):
+        return "action_greet"
+    
+    def run(self, dispatcher, tracker, domain):
+        greetings = [
+            "Oie, tudo bem? Sou a Mellody, assistente virtual😊",
+            "Oii sou a Mellody, assistente virtual! Como posso ajudar?🌟",
+            
+        ]
+        dispatcher.utter_message(text=random.choice(greetings))
+        return []
+
+class ActionPrecoServico(Action):
+
+    def name(self):
+        return "action_preco_servico"
+    
+    def run(self, dispatcher, tracker, domain):
+        servico = tracker.get_slot("servico")
+
+        precos = {
+            "cabelo": 400.00,
+            "unha normal": 50.00,
+            "luzes": 790.00,
+            "esmaltação em gel": 100.00,
+            "hidratação": 340.00,
+            "sobrancelha": 90.00
+        }
+        if servico in precos:
+            dispatcher.utter_message(
+                text=f"O preço de {servico} é R$ {precos[servico]:.2f}"
+            )
+        else:
+            dispatcher.utter_message(
+                text="Serviço não encontrado."
+            )
+
+        return []
+

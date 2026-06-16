@@ -24,6 +24,7 @@ nlu:
 - intent: say_name
   examples: | 
     - my name is [Duda](name)
+    - meu nome é [Duda](name)
     - my name is [Maria Eduarda](name)
     - I'm [Duda](name)
     - I'm [Maria Eduarda](name)
@@ -103,9 +104,21 @@ nlu:
 - intent: bot_challenge
   examples: |
     - are you a bot?
+    - qual é seu nome?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: valor_sessao
+  examples: | 
+    - quanto custa o cabelo?
+    - qual o preço da unha?
+    - quanto é a hidratação?
+    - valor do gel
+    - preço do serviço
+    - quanto custa [cabelo](servico)?
+    - valor de [luzes](servico)
+    - preço de [sobrancelha](servico)
 
 - intent: cotacao_dolar
   examples: |
@@ -124,3 +137,25 @@ nlu:
     - qnt ta o dolar
     - dolar hj
     - quanto ta o usd hj
+
+- intent: ask_confirmation
+  examples: |
+    - quero confirmar
+    - pode confirmar
+    - confirma pra mim
+
+- intent: confirm_schedule
+  examples: |
+    - sim, confirmo
+    - pode confirmar
+    - quero agendar
+    - confirmar agendamento
+
+- intent: yourewelcome
+  examples: |
+    - obrigado
+    - obrigada
+    - muito obrigada
+    - muito obrigado
+    - agradeço
+

@@ -14,6 +14,16 @@ rules:
   - action: utter_meeting
   wait_for_user_input: false
 
+- rule: Ask confirmation after saying the price of dolar
+  steps: 
+  - intent: ask_confirmation
+  - action: utter_ask_confirmation
+
+- rule: Confirm schedule when user says yes
+  steps:
+  - intent: confirm_schedule
+  - action: utter_confirmation
+
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye
@@ -28,5 +38,18 @@ rules:
   steps:
   - intent: cotacao_dolar
   - action: action_cotacao_dolar
+
+- rule: Says the price when ask value
+  steps:
+  - intent: valor_sessao
+  - action: action_preco_servico
+
+- rule: Thank the user when they thank the bot
+  steps:
+  - intent: yourewelcome
+  - action: utter_yourewelcome
+
+
+ 
 
 

@@ -10,9 +10,15 @@ intents:
   - mood_unhappy
   - bot_challenge
   - cotacao_dolar
+  - preco_servico
+  - valor_sessao        
+  - ask_confirmation    
+  - confirm_schedule
+  - yourewelcome
 
 entities:
   - name
+  - servico
 
 slots:
   name:
@@ -21,34 +27,54 @@ slots:
     - type: from_entity
       entity: name
 
+  servico:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: servico
+
 responses:
   utter_greet:
   - text: "Hello! How are you?"
+  - text: "Oii, sou a assistente virtual! como posso te ajudar?"
+
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
     image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_ask_name:
-  - text: "What's your name?"
+  - text: "Qual é seu nome?"
 
   utter_happy:
   - text: "Great!"
 
   utter_meeting:
-  - text: "Nice to meet you, {name}"
+  - text: "Prazer, {name}!!"
+
+  utter_ask_confirmation:
+  - text: "Deseja confirmar?"
+
+  utter_confirmation:
+  - text: "Okk! Confirmado!"
 
   utter_did_that_help:
-  - text: "Did that help you?"
+  - text: "Precisa de mais alguma ajuda?"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Tchauu {name}, até mais 💕"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "Me chamo Mellody 💫"
+
+  utter_yourewelcome:
+  - text: "De nada! Se precisar de mais alguma coisa, é só chamar!"
 
 actions:
   - action_cotacao_dolar 
+  - action_greet
+  - action_preco_servico
+  - action_yourewelcome
 
 session_config:
   session_expiration_time: 180

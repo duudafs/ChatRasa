@@ -1,0 +1,15 @@
+{
+  "0": "affirm",
+  "1": "ask_confirmation",
+  "2": "bot_challenge",
+  "3": "confirm_schedule",
+  "4": "cotacao_dolar",
+  "5": "deny",
+  "6": "goodbye",
+  "7": "greet",
+  "8": "mood_great",
+  "9": "mood_unhappy",
+  "10": "say_name",
+  "11": "thank_an_action",
+  "12": "valor_sessao"
+}
